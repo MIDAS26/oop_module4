@@ -1,0 +1,25 @@
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+.bt-ok {
+  width: 50%;
+}
+.bt-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.city {
+  width: 100%;
+}
+.amount {
+  width: 100%;
+}
+.salary {
+  width: 100%;
+}
+.output-value {
+  font-size: 16px;
+}

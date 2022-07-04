@@ -1,0 +1,17 @@
+.selected{
+  color: white;
+  background-color: #001F73;
+}
+.not-selected{
+  color: #001F73;
+  background: #fff;
+}
+.bt-container {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bt {
+  width: 100px;
+}

@@ -1,0 +1,39 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Registration form
+    </mat-card-title>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <div class="content-container">
+      <mat-form-field appearance="outline" class="city">
+        <mat-label>Select city</mat-label>
+        <mat-select (selectionChange)='changeValue($event.value)'>
+          <mat-option *ngFor="let position of positionTypes" [value]="position">{{position}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="salary">
+        <mat-label>Select initial salary</mat-label>
+        <mat-select (selectionChange)='changeSalary($event.value)'>
+          <mat-option *ngFor="let salary of salaryArr" [value]="salary">{{salary}}
+            <span matPrefix>$</span></mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance='outline' class='amount'>
+        <mat-label>Work experience</mat-label>
+        <input matInput type='number' class='amount-text' placeholder='0' min="0" (keypress)="numberOnly($event)" (input)="getAmount($event)">
+      </mat-form-field>
+      <div class="bt-container">
+        <button mat-raised-button
+                class="bt-ok"
+                (click)="onClickConvert()">
+          Ok
+        </button>
+      </div>
+    </div>
+    <div class="output">
+      <div class="output-value" [innerHTML]="output"></div>
+    </div>
+  </mat-card-content>
+</mat-card>

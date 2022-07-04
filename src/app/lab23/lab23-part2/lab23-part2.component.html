@@ -1,0 +1,23 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Files & Folders inspector
+    </mat-card-title>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <mat-form-field class="file-upload" appearance='fill'>
+      <mat-label>Select your file</mat-label>
+      <div>
+        <mat-toolbar class="file-upload-toolbar">
+          <input matInput [value]='myFilename' readonly name='memberContactNo'/>
+          <button mat-button color='primary' class="upload-button">
+            Upload
+          </button>
+        </mat-toolbar>
+        <input type='file' #UploadFileInput id='fileUpload' (change)='fileChangeEvent($event)' name='fileUpload'
+               accept='image/*'/>
+      </div>
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>

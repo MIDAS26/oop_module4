@@ -1,0 +1,39 @@
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+.firstName {
+  width: 100%;
+}
+.lastName {
+  width: 100%;
+}
+.date {
+  width: 100%;
+}
+.city {
+  width: 100%;
+}
+.bt-ok {
+  width: 50%;
+}
+.bt-add {
+  margin-left: 20px;
+  display: flex;
+  justify-self: center;
+  height: 40px;
+  margin-top: 10px;
+}
+.add-city-container {
+  display: flex;
+  flex-direction: row;
+}
+.bt-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.output-value {
+  font-size: 16px;
+}

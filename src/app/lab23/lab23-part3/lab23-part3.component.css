@@ -1,0 +1,25 @@
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+}
+.bt-container {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center
+}
+.bt-prev {
+  min-width: 100px;
+  margin-right: 10px;
+}
+.bt-next {
+  min-width: 100px;
+}
+.mat-h1 {
+  margin-left: 15px;
+}
+.img-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}

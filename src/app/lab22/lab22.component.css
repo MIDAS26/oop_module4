@@ -1,0 +1,13 @@
+.selected{
+  color: white;
+  background-color: #001F73;
+}
+.not-selected{
+  color: #001F73;
+  background: #fff;
+}
+.bt-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}

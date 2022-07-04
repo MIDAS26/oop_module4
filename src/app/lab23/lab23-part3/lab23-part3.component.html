@@ -1,0 +1,26 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Images slider
+    </mat-card-title>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <h1 class='mat-h1'>Cars</h1>
+    <div class="bt-container">
+      <button mat-raised-button (click)="onClickPrevious()" [disabled]="disabledPrevious" color="primary"
+              class="bt-prev">
+        <mat-icon matPrefix>skip_previous</mat-icon>
+        back
+      </button>
+      <button mat-raised-button (click)="onClickNext()" [disabled]="disabledNext" color="primary" class="bt-next">
+        next
+        <mat-icon matSuffix>skip_next</mat-icon>
+      </button>
+    </div>
+    <div class="img-container">
+      <h1>{{headerArr[count]}}</h1>
+      <img src="{{imagesArr[count]}}" alt="" style="width: 100%;">
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,20 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Mile - перерахунок миль в кілометри
+    </mat-card-title>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <div class="content-container">
+      <mat-form-field appearance="outline" class="input">
+        <mat-label>Милі</mat-label>
+        <input #input matInput>
+      </mat-form-field>
+      <button mat-raised-button class="bt-convert" (click)="onClickConvert(input.value)">Convert</button>
+    </div>
+    <div class="output">
+      <p class="output-value">{{ output }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>

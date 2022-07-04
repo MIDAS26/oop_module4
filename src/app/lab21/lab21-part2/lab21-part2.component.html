@@ -1,0 +1,34 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Photo print calculator
+    </mat-card-title>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <div class="content-container">
+      <div class="radio">
+        <label>Photo size</label>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="price" class="radio-group">
+          <mat-radio-button value="3" class="radio-button" color="primary">9x12</mat-radio-button>
+          <mat-radio-button value="5" class="radio-button" color="primary">12x15</mat-radio-button>
+          <mat-radio-button value="10" class="radio-button" color="primary">18x24</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <mat-form-field appearance="outline" class="amount">
+        <mat-label>Amount</mat-label>
+        <input #amount matInput (keypress)="numberOnly($event)" type="number" min="1">
+      </mat-form-field>
+    </div>
+    <div class="bt-container">
+      <button mat-raised-button
+              class="bt-ok"
+              (click)="onClickConvert(price, amount.value)">
+        Ok
+      </button>
+    </div>
+    <div class="output">
+      {{ output }}
+    </div>
+  </mat-card-content>
+</mat-card>

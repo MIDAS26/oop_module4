@@ -1,0 +1,27 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Car builder
+    </mat-card-title>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <div class="content-container">
+      <div class="img-container">
+        <h3>BMW M5 2022</h3>
+        <img src="./assets/img/common/Screenshot_3.png" alt="" style="width: 100%;">
+      </div>
+      <div class="radio">
+        <section class="section" [formGroup]="options">
+          <h4 class="title">Select your options:</h4>
+          <p><mat-checkbox formControlName="color" (change)="change()" color="primary">Aventurin Red Metallic </mat-checkbox></p>
+          <p><mat-checkbox formControlName="wheels" (change)="change()" color="primary">20" M Double-spoke black wheels </mat-checkbox></p>
+          <p><mat-checkbox formControlName="leather" (change)="change()" color="primary">Black leather</mat-checkbox></p>
+        </section>
+      </div>
+    </div>
+    <div class="output">
+      Total price is: {{ result }}
+    </div>
+  </mat-card-content>
+</mat-card>

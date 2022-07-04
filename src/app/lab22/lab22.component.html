@@ -1,0 +1,26 @@
+<div class="bt-container">
+  <button mat-raised-button
+          (click)="toggleComponent('Lab22part1')"
+          [class]='isLab22part1? "selected": "not-selected"'>
+    Lab22 Part1
+  </button>
+  <button mat-raised-button
+          (click)="toggleComponent('Lab22part2')"
+          [class]='isLab22part2? "selected": "not-selected"'>
+    Lab22 Part2
+  </button>
+  <button mat-raised-button
+          (click)="toggleComponent('Lab22part3')"
+          [class]='isLab22part3? "selected": "not-selected"'>
+    Lab22 Part3
+  </button>
+</div>
+<ng-container *ngIf="isLab22part1">
+  <app-lab22-part1></app-lab22-part1>
+</ng-container>
+<ng-container *ngIf="isLab22part2">
+  <app-lab22-part2></app-lab22-part2>
+</ng-container>
+<ng-container *ngIf="isLab22part3">
+  <app-lab22-part3></app-lab22-part3>
+</ng-container>

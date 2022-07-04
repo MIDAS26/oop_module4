@@ -1,0 +1,47 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Registration form
+    </mat-card-title>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <div class="content-container">
+      <mat-form-field appearance="outline" class="firstName">
+        <mat-label>First name</mat-label>
+        <input #firstName matInput>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="lastName">
+        <mat-label>Last name</mat-label>
+        <input #lastName matInput>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="date">
+        <mat-label>date</mat-label>
+        <input matInput [matDatepicker]="picker" #dateOfBirth (dateChange)="getDate(dateOfBirth)">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="email">
+        <mat-label>Email</mat-label>
+        <input #email matInput>
+      </mat-form-field>
+      <div class="radio">
+        <label>Sex</label>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="sex" class="radio-group">
+          <mat-radio-button value="Male" class="radio-button" color="primary">Male</mat-radio-button>
+          <mat-radio-button value="Female" class="radio-button" color="accent">Female</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="bt-container">
+        <button mat-raised-button
+                class="bt-ok"
+                (click)="onClickConvert(firstName.value, lastName.value, dateOfBirth.value, email.value, sex)">
+          Ok
+        </button>
+      </div>
+    </div>
+    <div class="output">
+      <div class="output-value" [innerHTML]="output"></div>
+    </div>
+  </mat-card-content>
+</mat-card>
